@@ -1,21 +1,21 @@
-<?
+<?php
 // ======================================================
 // Clase: class.Database.php
 // Funcion: Se encarga del manejo con la base de datos
 // Descripcion: Tiene varias funciones muy útiles para
 // 				el manejo de registros.
-// 				
+//
 // Ultima Modificación: 17 de marzo de 2015
 // ======================================================
-	
+
 
 class Database{
 
 	private $_connection;
 	private $_host = "localhost";
-	private $_user = "univer_user";
-	private $_pass = "123456";
-	private $_db   = "univer_db";
+	private $_user = "root";
+	private $_pass = "";
+	private $_db   = "universidad_db";
 
 
 	// Almacenar una unica instancia
@@ -68,11 +68,11 @@ class Database{
 
 	// ==================================================
 	// 	Funcion que ejecuta el SQL y retorna un ROW
-	// 		Esta funcion esta pensada para SQLs, 
+	// 		Esta funcion esta pensada para SQLs,
 	// 		que retornen unicamente UNA sola línea
 	// ==================================================
 	public static function get_Row($sql){
-		
+
 		if(!self::es_string($sql))
 			exit();
 
@@ -89,7 +89,7 @@ class Database{
 
 	// ==================================================
 	// 	Funcion que ejecuta el SQL y retorna un CURSOR
-	// 		Esta funcion esta pensada para SQLs, 
+	// 		Esta funcion esta pensada para SQLs,
 	// 		que retornen multiples lineas (1 o varias)
 	// ==================================================
 	public static function get_Cursor($sql){
@@ -242,13 +242,13 @@ class Database{
 			return $resultado;
 		}
 
-		
+
 
         return $resultado;
 	}
 
 	// ====================================================================
-	// 	Funciones para encryptar y desencryptar data: 
+	// 	Funciones para encryptar y desencryptar data:
 	// 		crypt_blowfish_bydinvaders
 	// ====================================================================
 	function crypt($aEncryptar, $digito = 7) {
@@ -267,7 +267,7 @@ class Database{
             return true;
         else
             return false;
-        
+
     }
 
 }
