@@ -8,6 +8,26 @@ app.factory('Paises', ['$http', function($http){
 				total: 0,
 				totalpaginas: 0,
 				data: [],
+
+				irA: function( pag ){
+					self.cargarData({
+							pagina: pag
+					})
+				},
+
+				cargarUltima: function(){
+						//Objeto anonimo en JS
+						self.cargarData({
+								pagina: self.totalpaginas
+						})
+				},
+				cargarPrimera: function(){
+						//Objeto anonimo en JS
+						self.cargarData({
+								pagina: 1
+						})
+				},
+
 				cargarData: function(opciones){
 						self.cargando = true;
 						self.pagina = opciones.pagina;

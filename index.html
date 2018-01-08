@@ -23,9 +23,20 @@
 		<h1>Paginación <small>en servidor</small></h1>
 		<hr>
 
-		<pre>
+		<!--<pre>
 			{{ paises | json }}
-		</pre>
+		</pre>-->
+
+		<div class="alert alert-info" ng-show="paises.cargando">
+				<strong>Cargando</strong> espere por favor...
+		</div>
+
+		<button class="btn btn-default"
+				ng-click="irPrimera()"><i class="fa fa-angle-double-left"></i></button>
+		<button class="btn btn-default botNum"
+				ng-repeat="num in arrPaginas( paises.totalpaginas )" ng-click="irA(num)">{{ num }}</button>
+		<button class="btn btn-default"
+				ng-click="irUltima()"><i class="fa fa-angle-double-right"></i></button>
 
 		<table class="table table-striped table-hover">
 			<thead>

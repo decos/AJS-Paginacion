@@ -16,9 +16,24 @@
 
 2. Añadir al inicio `<?php` al fichero `class.Database.php`
 
-## Paginación - Parte 3
+## Paginacion del lado del servidor - Parte 3
 
 1. Crear una tabla en el cuerpo de la vista principal del proyecto
 
 2. Codear el fichero `servicios.js`
-    - Consumir `php/servicios/paises.getPaises.php` haciendo uso del servicio `$http` 
+    - Consumir `php/servicios/paises.getPaises.php` haciendo uso del servicio `$http`
+
+## Paginacion del lado del servidor - Parte 4
+
+1. Añadir los botones en la vista principal:
+    - `irA`
+    - `irPrimera`
+    - `irUltima`
+
+2. Añadir las funcionalidades de los botones creados en el punto anterior en el fichero `controladores.js`
+
+3. Añadir las funciones `anonimas` en el fichero `servicios.js`
+
+4. Añadir el `sleep(1)` en el fichero `paises.getPaises` para que demore 1 segundo en devolver la data
+
+5. Añadir una alerta de tipo `info` mientras la información es cargada en la vista

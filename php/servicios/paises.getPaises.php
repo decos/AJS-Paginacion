@@ -7,7 +7,7 @@ $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 $request =  (array) $request;
 
-//sleep(1);
+sleep(1);
 
 // Retorna un json
 header('Content-Type: application/json;charset=utf-8');
@@ -18,7 +18,7 @@ $total = intval($total);
 
 // Dado el total (240 paises), contra el numero de paginas
 $totalpaginas = $total / 20;
-$totalpaginas = ceil($totalpaginas); // redondear al siguiente 
+$totalpaginas = ceil($totalpaginas); // redondear al siguiente
 
 // Determinar la pagina inicial
 $pagina = $request['pagina'];
@@ -34,8 +34,8 @@ $sql  = "SELECT * FROM paises limit $pagina,20";
 $paises = Database::get_arreglo($sql);
 
 
-$respuesta = json_encode( 
-			array('err' => false, 
+$respuesta = json_encode(
+			array('err' => false,
 				  'total'=> $total,
 				  'totalpaginas'=> $totalpaginas,
 				  'data' => $paises )
