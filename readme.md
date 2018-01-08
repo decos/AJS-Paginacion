@@ -15,3 +15,10 @@
     - db : universidad_db
 
 2. Añadir al inicio `<?php` al fichero `class.Database.php`
+
+## Paginación - Parte 3
+
+1. Crear una tabla en el cuerpo de la vista principal del proyecto
+
+2. Codear el fichero `servicios.js`
+    - Consumir `php/servicios/paises.getPaises.php` haciendo uso del servicio `$http` 
